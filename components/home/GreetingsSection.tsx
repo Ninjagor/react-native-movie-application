@@ -6,7 +6,7 @@ const GreetingsSection = () => {
   return (
   <>
       <View style={styles.container}>
-        <Text style={styles.smallText}>Welcome Back, Rohit</Text>
+        <Text style={styles.smallText}>Welcome Back</Text>
         <Text style={styles.bigText}>Explore Top Movies</Text>
       </View>
   </>
