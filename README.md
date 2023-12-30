@@ -10,12 +10,12 @@ This is a movie application which I have programmed using Typescript, React-Nati
 # Running Locally
 Below are the steps to run this application locally.
 
-### 1.) Clone Github Repo
+### Clone Github Repo
 ```
 git clone https://github.com/Ninjagor/react-native-movie-application.git
 ```
 
-### 2.) Install Modules
+### Install Modules
 ```
 npm install
 ```
