@@ -1,19 +1,25 @@
 import { Link, Stack } from 'expo-router';
-import { StyleSheet } from 'react-native';
-
-import { Text, View } from '../components/Themed';
+import { StyleSheet, TouchableOpacity, Text, SafeAreaView, StatusBar } from 'react-native';
+import { useRouter } from 'expo-router';
+import MainHeaderBar from '../components/MainHeaderBar';
 
 export default function NotFoundScreen() {
+  const router = useRouter();
   return (
     <>
-      <Stack.Screen options={{ title: 'Oops!' }} />
-      <View style={styles.container}>
-        <Text style={styles.title}>This screen doesn't exist.</Text>
+      <MainHeaderBar />
+        <StatusBar
+        animated={true}
+        barStyle="dark-content"
+        />
+        <SafeAreaView style={styles.container}>
+          <Text style={styles.errorTitle}>404</Text>
+          <Text style={styles.title}>This screen doesn't exist.</Text>
 
-        <Link href="/" style={styles.link}>
-          <Text style={styles.linkText}>Go to home screen!</Text>
-        </Link>
-      </View>
+          <Link href="/" style={styles.link}>
+            <Text style={styles.linkText}>Go to home screen!</Text>
+          </Link>
+      </SafeAreaView>
     </>
   );
 }
@@ -24,6 +30,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
+    backgroundColor: 'white',
+  },
+  errorTitle: {
+    fontWeight: 'bold',
+    fontSize: 50,
+    marginBottom: 10,
   },
   title: {
     fontSize: 20,
